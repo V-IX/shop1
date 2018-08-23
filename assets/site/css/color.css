@@ -1,0 +1,92 @@
+/* reset */
+
+a {color: #f11f47;}
+::selection {background: #f11f47;}
+
+.btn {background: #f11f47;}
+.btn:hover {background: #dd1239;}
+
+/* template */
+
+.pmenu > a:hover {color: #f11f47;}
+.minicart-counter {background: #f64444;}
+
+.header-contacts .item {color: #5e5e5e;}
+.header-contacts .fa {color: #f11f47;}
+
+.tmenu > ul > li > a {color: #5e5e5e;}
+.tmenu > ul > li > a:hover {color: #f11f47;}
+
+.breadcrumbs {color: #2299d6;}
+
+/* content */
+
+.offer-slide .btn_a:hover {background: #dd1239;}
+
+.homeinfo .more:before {border-left: 4px solid #f11f47;}
+
+
+.homecat a:hover,
+.homeinfo .more,
+
+.cmenu-list a:hover,
+.cmenu-list a._current,
+
+.catalog-item .img .icon:hover,
+.catalog-item:hover .title,
+
+.pagination a.num:hover,
+.pagination span.num,
+.pagination-nav:hover,
+
+.catalog-item .discover,
+
+.product-panel .oldprice,
+
+.product-mods.active label:hover,
+.product-mods label.current,
+
+.product-article:hover .title,
+
+.news-more,
+.news-item:hover .title,
+
+.qwe {
+	color: #f11f47;
+}
+
+.product-features .fa {color: #ff9000;}
+
+.product-panel .oldprice:before {border-top: 1px solid #f11f47;}
+
+.cart-counter-btn:hover {background: #f11f47; border-color: #f11f47;}
+
+.product-discover a > span {border-bottom: 2px dotted #f11f47;}
+
+.product-chars > li:before {border-left: 3px solid #f11f47;}
+
+.product-tabs-list > li > a:hover {
+	color: #f11f47;
+}
+
+.product-tabs-list > li > a.active {
+	color: #f11f47;
+	border-bottom-color: #f11f47;
+}
+
+.product-article .more:before {border-left: 3px solid #f11f47;}
+
+.product-articles-nav > li:hover,
+.product-articles-nav > li.current {
+	background: #f11f47;
+}
+
+.news-more:before {
+	border-left: 4px solid #f11f47;
+}
+
+.news-back {color: #2299d6;}
+
+.product-comment-link > span {color: #ff9000;}
+
+.htabs > a {border-bottom: 2px dashed #f11f47;}
