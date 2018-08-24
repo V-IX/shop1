@@ -9,7 +9,12 @@
 	<div class="wrapper">
 		<div class="catalog-left">
 			<? $this->load->view('site/shop/navigation'); ?>
-			<? if(isset($fields) and !empty($fields)) $this->load->view('site/shop/filters'); ?>
+			<? if(isset($fields) and !empty($fields)) {?>
+            <? $this->load->view('site/shop/filters'); ?>
+            <a href="javascript:void(0)" class='filterBtn'>
+                       <?=fa('filter mr10');?>Фильтр товаров
+            </a>
+            <? }?>
 			<?=isset($banners['catalog_left']) ? '<div class="mt20"></div>'.banner($banners['catalog_left']) : '';?>
 		</div>
 		<div class="catalog-right">

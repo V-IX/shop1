@@ -7,7 +7,7 @@
 	<title><?=$seo['title'];?></title>
 	<meta name="keywords" content="<?=$seo['keywords'];?>" />
 	<meta name="description" content="<?=$seo['description'];?>" />
-	<meta name="viewport" content="width=1000" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
 	<?=link_tag('assets/plugins/font-awesome/css/font-awesome.min.css');?>
 	<?=link_tag('assets/plugins/font-ubuntu/font.css');?>
@@ -38,9 +38,14 @@
 <body>
 
 <div class="super-wrapper">
-
 <section class="pre-header">
 	<div class="wrapper">
+	    <div class="pmenu-btn _1">
+		    <a href="javascript:void(0)" class="pmenuBtn">
+		        <?=fa('bars mr5')?>
+		        Меню сайта
+		    </a>
+		</div>
 		<nav class="pmenu">
 		<? foreach($preheader as $_pre) { ?>
 			<div class="item">
@@ -86,20 +91,61 @@
 				<?=$siteinfo['phone2'] != '' ? '<div>'.phone($siteinfo['phone2'], $siteinfo['phone2Mask']).'</div>' : null;?>
 			</div>
 		</div>
+		<div class="pmenu-btn _2">
+		    <a href="javascript:void(0)" class="pmenuBtn">
+		        <?=fa('bars mr5')?>  
+		    </a>
+		</div>
 	</div>
 </header>
-
 <? if(!empty($tmenu)) { ?>
 <section class="tmenu-wrap">
 	<div class="wrapper">
-		<div class="tmenu">
-			<ul>
-			<? foreach($tmenu as $_tmenu) { ?>
-				<li>
-					<a href="<?=base_url('catalog/'.$_tmenu['alias']);?>"><?=$_tmenu['title'];?></a>
-				</li>
-			<? } ?>
+	    <div class="tmenu-btn">
+		    <a href="<? 
+                if (uri(1)=='catalog') {
+                    echo 'javascript:void(0)';
+                } else {
+                    echo '/catalog';
+                }
+			?>" class="<? 
+                if (uri(1)=='catalog') {
+                    echo 'tmenuBtn tmenuBtnn';
+                } else {
+                    echo 'tmenuBtn';
+                }
+			?>">
+		        <?=fa('folder-open-o mr5')?>
+		        Каталог сайта 
+		    </a>
+		</div>
+<?      
+    function navss($item) { ?>
+    <li>
+			<a href="<?=base_url('catalog/'.$item['path']);?>" class="cmenu-item <?=$item['toggle'] == 'open' ? '_open' : '';?> <?=$item['toggle'] == 'current' ? '_open _current' : '';?>" style="padding-left: <?=$item['level'] * 10 + 5;?>px;">
+				<?=$item['title'];?>
+				<? if(isset($item['childs'])) { ?>
+				<span class="toggle">
+					<?=fa('chevron-left fa-fw');?>
+					<?=fa('chevron-down fa-fw');?>
+				</span>
+				<? } ?>
+			</a>
+			<? if(isset($item['childs']) and ($item['toggle'] == 'current' or $item['toggle'] == 'open')) { ?>
+			<ul class="cmenu-child">
+				<? foreach($item['childs'] as $child) { ?>
+					<?=navss($child);?>
+				<? } ?>
 			</ul>
+			<? } ?>
+    </li>
+<? }?>
+		<div class="tmenu">
+			<div class="cmenu-list _top">
+                <? foreach($navs as $nav) { ?>
+                    <?=navss($nav);?>
+                <? }?>
+            </div>
 		</div>
 	</div>
 </section>
