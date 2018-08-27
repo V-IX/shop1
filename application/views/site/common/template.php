@@ -16,7 +16,8 @@
 	<?=link_tag('assets/site/css/template.css');?>
 	<?=link_tag('assets/site/css/content.css');?>
 	<?=link_tag('assets/site/css/color.css');?>
-	
+    <?=link_tag('assets/plugins/flexslider/flexslider.css');?>
+    
 	<?=link_tag('favicon.ico', 'shortcut icon', 'image/ico');?>
 	<?=link_tag('favicon.ico', 'shortcut', 'image/ico');?>
 	
@@ -31,8 +32,10 @@
 	<?=script('assets/plugins/bpopup/jquery.bpopup.min.js');?>
 	<?=script('assets/plugins/checkers/checkers.js');?>
 	<?=script('assets/plugins/ajaxForm/form.js');?>
+	<?=script('assets/plugins/flexslider/jquery.flexslider-min.js');?>
 	<?=script('assets/site/js/cart.js');?>
 	<?=script('assets/site/js/js.js');?>
+	
 	
 </head>
 <body>

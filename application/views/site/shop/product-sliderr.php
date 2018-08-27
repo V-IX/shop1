@@ -1,7 +1,6 @@
 <div class="product-slider-wrap">
-<div class="wrapper">
-	<div class="flexslider" id="<?=$alias;?>Slider">
-		<ul class="slides">
+	<div class="product-slider" id="<?=$alias;?>Slider">
+		<ul>
 		<?  foreach($items as $product) { 
 		  if (isset($product['mainCatId']) AND $product['mainCatId']){
 		       
@@ -52,41 +51,16 @@
 		</ul>
 	</div>
 	<? if(count($items) > 4) { ?>
-	    <div class="offer-btns" id="<?=$alias;?>SliderBtns">
-        <a href="javascript:void(0)" class="<?=$alias;?>-sliderbtn _prev" id="<?=$alias;?>Prev">
-            <?=fa('chevron-left');?>
-        </a>
-        <a href="javascript:void(0)" class="<?=$alias;?>-sliderbtn _next" id="<?=$alias;?>Next">
-            <?=fa('chevron-right');?>
-        </a>
-    </div>
+		<a href="javascript:void(0)" class="product-sliderbtn _prev" id="<?=$alias;?>Prev" onclick="<?=$alias;?>.move(-1)"><?=fa('chevron-left');?></a>
+		<a href="javascript:void(0)" class="product-sliderbtn _next" id="<?=$alias;?>Next" onclick="<?=$alias;?>.move(1)"><?=fa('chevron-right');?></a>
+		
+		<script>
+			var <?=$alias;?> = new TINY.slider.slide('<?=$alias;?>',{
+				id: '<?=$alias;?>Slider',
+				auto: false,
+				left:'<?=$alias;?>Prev',
+				right:'<?=$alias;?>Next'
+			}); 
+		</script>
 	<? } ?>
-	</div>
 </div>
-
-
-<script>
-    numItems = 4;
-    numWidth = 245;
-    if ($(window).width() <= '999') {
-        numItems = 3;
-    }
-    if ($(window).width() <= '575') {
-        numItems = 1;
-        numWidth = 245;
-    }   
-            $('#<?=$alias;?>Slider').flexslider({
-                    animation: "slide",
-                    controlNav: false,
-                    directionNav: false,
-                    slideshow: false,
-                    itemWidth: numWidth,
-                    animationLoop: true,
-                    itemMargin: 10,
-                    minItems: numItems,
-                    maxItems: numItems,
-                    prevText: 'prod_hitPrev',
-                    nextText: 'prod_hitNext',
-                    customDirectionNav: $("#<?=$alias;?>SliderBtns a")
-            });
-</script>

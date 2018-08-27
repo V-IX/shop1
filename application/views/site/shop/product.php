@@ -328,7 +328,7 @@
 			</div>
 		</div>
 	<? } ?>
-	
+
 	<? // ----- ASSOCIATED -----?>
 	<? if(!empty($associated)) { ?>
 		<div class="wrapper mt50">

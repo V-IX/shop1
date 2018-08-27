@@ -43,7 +43,7 @@
 							<div class="brief"><?=$item['brief'];?></div>
 						</a>
 					</td>
-					<td class="td-price" nowrap>
+					<td class="td-price _1" nowrap>
 						<div class="price"><?=price($item['price']);?> <?=$currency['unit'];?></div>
 						<div class="price2"><?=price_old($item['price']);?> byr</div>
 					</td>

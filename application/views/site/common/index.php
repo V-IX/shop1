@@ -1,7 +1,6 @@
 <?=script('assets/plugins/tiny/tiny.js');?>
 
 <? if(!empty($slider)) {?>
-
 <div class="offer">
 	<div class="wrapper">
 		<div class="offer-left"><? $this->load->view('site/common/slider'); ?></div>

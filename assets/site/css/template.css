@@ -648,15 +648,10 @@
 }
 
 .pmenu-btn,
-.tmenu-btn {
-    display: none;
-}
-
+.tmenu-btn,
+.filterBtn,
+.offer-btns,
 .cmenu-list._top {
-    display: none;
-}
-
-.filterBtn {
     display: none;
 }
 
@@ -679,6 +674,21 @@
 ------------------------------------------------------*/
 
 @media screen and (max-width: 999px) {
+    .scontent {
+        top: 40% !important;
+        left: 70% !important;
+    }
+    #prod_hitSlider {
+        width: auto !important;
+    }
+    #prod_hitSlider > div > ul > li {
+        height: auto !important;
+    }
+    .offer-slider,
+    .offer-slide,
+    .offer-left {
+        height: auto !important;
+    }
     /*-------------------- 
             FOOTER
     ---------------------*/
@@ -1067,6 +1077,16 @@
 ------------------------------------------------------*/
 
 @media screen and (max-width: 768px) {
+    .scontent {
+        top: 30% !important;
+        left: 60% !important;
+    }
+    .offer {
+        margin-bottom: 0 !important;
+    }
+    .comments-form {
+        width: 100% !important;
+    }
     /*-------------------- 
             PRODUCT
     ---------------------*/
@@ -1087,6 +1107,44 @@
         display: flex;
         flex-direction: row;
     }
+    /*-------------------- 
+             CART
+    ---------------------*/
+    .cart-form .col-4,
+    .cart-form .col-6 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .cart-list thead:first-child {
+        display: none;
+    }
+    .cart-list tbody tr {
+        display: flex;
+        flex-direction: column;
+    }
+    .cart-list .img {
+        width: 50% !important;
+        margin: 0 auto;
+    }
+    .cart-list .item {
+        text-align: center;
+    }
+    .cart-list .td-count {
+        margin: 0 auto;
+    }
+    .fa-times:after {
+        content: "\f00d";
+        content: " Удалить товар из корзины";
+    }
+    .cart-list .td-price._1::before {
+        content: "Цена";
+    }
+    .cart-list tfoot td {
+        font-size: 15px !important;
+    }
+    .cart-title .title {
+        font-size: 19px !important;
+    }
 }
 
 /*_____________________________________________________
@@ -1094,11 +1152,17 @@
 ------------------------------------------------------*/
 
 @media screen and (max-width: 575px) {
+    .offer-slide .scontent {
+        display: none;
+    }
     .faq-form {
         margin-top: 20px !important;
     }
     .content {
         padding: 20px 0 40px;
+    }
+    #prod_hitSlider {
+        width: auto !important;
     }
     /*-------------------- 
             FOOTER
@@ -1262,7 +1326,8 @@
     ---------------------*/
     .advantages,
     .homeprod,
-    .homeinfo {
+    .homeinfo,
+    .homeabout {
         padding: 30px 0 !important;
     }
     /* advantages */
