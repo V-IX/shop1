@@ -12,7 +12,7 @@
 			<th>#</th>
 			<th>Изображение</th>
 			<th>Заголовок</th>
-			<th>Ссылка</th>
+			<th>Ссылки</th>
 			<th></th>
 			<th>Действия</th>
 		</tr>
@@ -21,12 +21,15 @@
 	<? foreach($items as $item) { ?>
 		<tr>
 			<td class="w50"><?=$item['num'];?></td>
-			<td class="w150"><?=check_img('assets/uploads/slider/'.$item['img'], array('class' => 'block w125'));?></td>
+			<td class="w150"><?=check_img('assets/uploads/slider/thumb/'.$item['img'], array('class' => 'block w125'));?></td>
 			<td>
 				<div class="item-title"><?=$item['title'];?></div>
 				<div class="h6 text-gray"><?=$item['text'];?></div>
 			</td>
-			<td><?=$item['link'];?></td>
+			<td>
+				<? if($item['btnLink'] != '') { ?><div><?=fa('link fa-fw text-gray mr5');?> <?=anchor($item['btnLink'], $item['btnLabel'], array('target' => '_blank'));?></div><? } ?>
+				<? if($item['btn2Link'] != '') { ?><div><?=fa('link fa-fw text-gray mr5');?> <?=anchor($item['btn2Link'], $item['btn2Label'], array('target' => '_blank'));?></div><? } ?>
+			</td>
 			<td class="text-right"><?=$item['visibility'] == 1 ? fa('eye text-success') : fa('eye-slash text-error');?></td>
 			<td class="w125">
 				<?=anchor('admin/'.$this->uri->segment(2).'/edit/'.$item['idItem'], '<i class="fa fa-pencil"></i>', array('class' => 'btn btn-success btn-icon'));?>

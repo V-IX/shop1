@@ -655,7 +655,7 @@
     display: none;
 }
 
-/* 
+/*
                     MEDIA-QUERIES
 */
 
@@ -689,7 +689,7 @@
     .offer-left {
         height: auto !important;
     }
-    /*-------------------- 
+    /*--------------------
             FOOTER
     ---------------------*/
     .footer-bottom,
@@ -715,7 +715,7 @@
     .footer-bottom .text-right {
         text-align: left;
     }
-    /*-------------------- 
+    /*--------------------
              MAIN
     ---------------------*/
     /* offer */
@@ -754,7 +754,7 @@
     .homeinfo .item {
         width: 100% !important;
     }
-    /*-------------------- 
+    /*--------------------
             CATALOG
     ---------------------*/
     .catalog-left {
@@ -764,7 +764,7 @@
         width: 100% !important;
         padding-left: 250px;
     }
-    /*-------------------- 
+    /*--------------------
              NEWS
     ---------------------*/
     .news-left {
@@ -774,7 +774,7 @@
     .news-right {
         margin-left: -295px;
     }
-    /*-------------------- 
+    /*--------------------
             PRODUCT
     ---------------------*/
     .product-left {
@@ -838,7 +838,7 @@
     .page-text {
         margin-top: 20px;
     }
-    /*-------------------- 
+    /*--------------------
             HEADER
     ---------------------*/
     .logo {
@@ -941,13 +941,13 @@
         transition: all 0.3s ease 0s;
         position: relative;
     }
-    /*-------------------- 
+    /*--------------------
             FOOTER
     ---------------------*/
     .footer-top {
         padding: 30px 0;
     }
-    /*-------------------- 
+    /*--------------------
             MAIN
     ---------------------*/
     .advantages,
@@ -990,7 +990,7 @@
     .homeinfo .side.right {
         margin-top: 30px;
     }
-    /*-------------------- 
+    /*--------------------
            CATALOG
     ---------------------*/
     .cmenu {
@@ -1040,7 +1040,7 @@
     .catalog-list > .row > .floater {
         display: none;
     }
-    /*-------------------- 
+    /*--------------------
              NEWS
     ---------------------*/
     .news-list > li {
@@ -1087,7 +1087,7 @@
     .comments-form {
         width: 100% !important;
     }
-    /*-------------------- 
+    /*--------------------
             PRODUCT
     ---------------------*/
     .product-left,
@@ -1107,7 +1107,7 @@
         display: flex;
         flex-direction: row;
     }
-    /*-------------------- 
+    /*--------------------
              CART
     ---------------------*/
     .cart-form .col-4,
@@ -1164,7 +1164,7 @@
     #prod_hitSlider {
         width: auto !important;
     }
-    /*-------------------- 
+    /*--------------------
             FOOTER
     ---------------------*/
     .footer-bottom .col-6 {
@@ -1188,7 +1188,7 @@
     .footer-nav {
         display: none;
     }
-    /*-------------------- 
+    /*--------------------
             MAIN
     ---------------------*/
     /* homecat */
@@ -1215,14 +1215,14 @@
         padding-left: 0 !important;
         margin-left: 0 !important;
     }
-    /*-------------------- 
+    /*--------------------
             FAQ
     ---------------------*/
     .form-group .col-4 {
         width: 100%;
         margin-bottom: 5px;
     }
-    /*-------------------- 
+    /*--------------------
            CONTACTS
     ---------------------*/
     .contacts .row > div {
@@ -1244,14 +1244,14 @@
     .form-group > .col-6 {
         margin-bottom: 10px !important;
     }
-    /*-------------------- 
+    /*--------------------
            CATALOG
     ---------------------*/
     .catalog-list > .row > li {
         width: 80%;
         margin-bottom: 20px;
     }
-    /*-------------------- 
+    /*--------------------
              NEWS
     ---------------------*/
     .news-left > .row {
@@ -1269,7 +1269,7 @@
     .news-left > .row > .text-gray {
         width: 50%;
     }
-    /*-------------------- 
+    /*--------------------
             PRODUCT
     ---------------------*/
     .product-panel > .top > .row,
@@ -1308,20 +1308,20 @@
         margin-top: 0;
         margin-bottom: 10px;
     }
-    /*-------------------- 
+    /*--------------------
             HEADER
     ---------------------*/
     .header-contacts > .item:first-child {
         display: none;
     }
-    /*-------------------- 
+    /*--------------------
             FOOTER
     ---------------------*/
     .footer-title {
         margin-bottom: 15px;
         text-align: center;
     }
-    /*-------------------- 
+    /*--------------------
             MAIN
     ---------------------*/
     .advantages,
@@ -1342,7 +1342,7 @@
     .homecat .list {
         padding: 20px 10px 0px !important;
     }
-    /*-------------------- 
+    /*--------------------
              NEWS
     ---------------------*/
     .news-list > li {
@@ -1351,7 +1351,7 @@
     .news-item .img {
         display: none;
     }
-    /*-------------------- 
+    /*--------------------
            REVIEWS
     ---------------------*/
     .review .img {
@@ -1361,3 +1361,47 @@
         padding-left: 0 !important;
     }
 }
+
+/* -- SLIDER INTELLECT -- */
+
+/*
+.offer { position: relative; height: 575px; overflow: hidden; }
+.offer-slide { position: relative; height: 575px; }
+.offer-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000 no-repeat center; background-size: cover; }
+.offer-img._mob { display: none; }
+.offer-content { line-height: 575px; }
+.offer-content .wrap { display: inline-block; vertical-align: middle; line-height: 1; }
+.offer-content .title { font-size: 44px; font-weight: 300; line-height: 60px; text-transform: uppercase; }
+.offer-content .title strong { font-weight: 500; }
+.offer-content .descr { margin-top: 20px; font-size: 16px; line-height: 26px; }
+.offer-content .more { margin-top: 30px; }
+.offer-content .more > a { margin-right: 10px; }
+.offer-content .more > a:last-child { margin-right: 0; }
+.offer-btn { display: inline-block; vertical-align: middle; font-size: 16px; font-weight: 500; line-height: 55px; color: #fff; text-align: center; text-decoration: none; height: 55px; padding: 0 20px; background: #3ac000; transition: all 0.3s ease 0s; }
+.offer-btn:hover { background: #449f1d; }
+.offer-btn._alt { line-height: 51px; padding: 0 50px; background: none; border: 2px solid #3ac000; }
+.offer-btn._alt:hover { background: #449f1d; border-color: #449f1d; }
+
+@media (max-width: 992px) {
+  .offer { height: 450px; }
+  .offer-slide { height: 450px; }
+  .offer-content { line-height: 450px; }
+  .offer-content .title { font-size: 32px; line-height: 42px; }
+}
+@media (max-width: 768px) {
+  .offer { height: 270px; }
+  .offer-slide { height: 270px; }
+  .offer-content { line-height: 270px; }
+  .offer-content .title { font-size: 20px; line-height: 30px; }
+  .offer-content .more { margin-top: 20px; }
+  .offer-btn { height: auto; font-size: 14px; line-height: 20px; padding: 10px 20px; margin: 0 10px 10px 0; }
+  .offer-btn._alt { line-height: 20px; padding: 8px 20px; }
+}
+
+@media (max-width: 520px) {
+  .offer { height: 300px; }
+  .offer-slide { height: 300px; }
+  .offer-content { line-height: 300px; }
+  .offer-img._pc { display: none; }
+  .offer-img._mob { display: block; }
+} */
